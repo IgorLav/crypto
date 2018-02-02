@@ -1,0 +1,338 @@
+/*------------------------------RESET DEFAULT STYLES--------------------------------*/
+/*----------------------------------------------------------------------------------*/
+html, body {
+    width: 100%;
+    height: 100%;
+    font-family: 'Open Sans';
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.5;
+    background: #fff;
+}
+
+div, p, a, span, em, strong, img, h1, h2, h3, h4, h5, h6, ul, ol, li, dl, dt, dd, table, td, tr, form, fieldset, label, select, input, textarea, header, nav, section, article, aside, footer, blockquote {
+    padding: 0;
+    margin: 0;
+    outline: none;
+    list-style: none;
+
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
+header, nav, section, article, aside, footer {
+    display: block
+}
+
+textarea {
+    vertical-align: top;
+    resize: none;
+}
+
+:focus {
+    outline: none;
+}
+
+input[type=submit], button {
+    cursor: pointer;
+}
+
+img, fieldset {
+    border: 0;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+.btn {
+    display: inline-block;
+    border-radius: 20px;
+    padding: 10px 30px;
+    border: none;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 12px;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+.text-warm {
+    color: #ffb100;
+}
+
+.btn-primary {
+    background-color: #2eb8e6;
+    color: #fff;
+}
+
+.btn-warm {
+    background-color: #fcaa2a;
+    color: #fff;
+}
+
+.btn-primary-outline {
+    border: 1px solid #fff;
+    background-color: transparent;
+    color: #fff;
+}
+
+.form-control {
+    display: block;
+    width: 100%;
+    border-radius: 3px;
+    background-color: #fefefe;
+    border: #dedede;
+    padding: 10px 15px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+/*===================================COLORS==========================================*/
+/*#000a23*/
+
+
+@keyframes slideInLeft {
+    0%{
+        opacity: 0;
+        -webkit-transform: translateX(-100px);
+        transform: translateX(-100px);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    0%{
+        opacity: 0;
+        -webkit-transform: translate(100px, -50%);
+        transform: translate(100px, -50%);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: translate(0, -50%);
+        transform: translate(0, -50%);
+    }
+}
+
+@keyframes slideInBottom {
+    0%{
+        opacity: 0;
+        -webkit-transform: translateY(30px);
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: translateY(0);
+        -moz-transform: translateY(0);
+        -ms-transform: translateY(0);
+        -o-transform: translateY(0);
+        transform: translateY(0);
+    }
+}
+
+
+/*----------------------------------------WRAP--------------------------------------*/
+.wrap {
+    position: relative;
+    overflow: hidden;
+}
+
+.container {
+    position: relative;
+    max-width: 1170px;
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: 0 auto;
+}
+
+/*-------------------------------------HEADER---------------------------------------*/
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 70px;
+    z-index: 999;
+    padding: 10px 0;
+}
+
+.header .logo {
+    display: block;
+    width: 120px;
+}
+
+.header .logo img {
+    width: 100%;
+    height: auto;
+    vertical-align: top;
+}
+
+/*-------------------------------------BANNER--------------------------------------*/
+.banner {
+    position: relative;
+    background: url(../img/bg.jpg) no-repeat center;
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+
+.banner:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #000;
+    opacity: .45;
+    z-index: 1;
+}
+
+.banner .container {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    color: #fff;
+    z-index: 1;
+}
+
+.banner .text-wrap {
+    opacity: 0;
+    padding-top: 140px;
+    width: calc(100% - 300px);
+    padding-bottom: 60px;
+
+    animation: .65s slideInLeft .5s forwards ease;
+}
+
+.banner-title {
+    font: 700 46px "Poppins";
+    margin-bottom: 20px;
+}
+
+.banner-sub-text {
+    width: 80%;
+    font-size: 18px;
+    margin-bottom: 45px;
+}
+
+.banner .btns-wrap {
+    margin-bottom: 60px;
+}
+
+.banner .btns-wrap .btn {
+    margin-right: 15px;
+    min-width: 170px;
+}
+
+.banner .form-wrap {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    max-width: 300px;
+    width: 100%;
+
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+
+    border-radius: 10px;
+    overflow: hidden;
+    opacity: 0;
+
+    animation: .65s slideInRight .5s forwards ease;
+}
+
+/*-------------------------------------FORM---------------------------------------*/
+.form-header {
+    text-align: center;
+    background: #04133a;
+}
+
+.form-header,
+.form-list {
+    padding: 15px 30px;
+}
+
+.form-list {
+    padding-top: 30px;
+    background: rgba(0, 23, 45, .6);
+}
+
+.form-list-item {
+    margin-bottom: 20px;
+}
+
+.form-wrap .form-control {
+    color: #000;
+    background-color: #d2d2d2;
+}
+
+.form-wrap .form-title {
+    width: 80%;
+    margin: 0 auto;
+    font-weight: 700;
+}
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    opacity: 1;
+    color: #000;
+}
+
+::-moz-placeholder { /* Firefox 19+ */
+    opacity: 1;
+    color: #000;
+}
+
+:-ms-input-placeholder { /* IE 10+ */
+    opacity: 1;
+    color: #000;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+    opacity: 1;
+    color: #000;
+}
+
+/*-------------------------------------COUNTER---------------------------------------*/
+.flip-clock-wrapper {
+    margin: 0;
+    opacity: 0;
+    animation: .5s slideInBottom .8s forwards linear;
+}
+
+.flip-clock-wrapper ul li a div div.inn,
+.flip-clock-dot {
+    background-color: #04133a;
+    font-size: 36px;
+    line-height: 2;
+}
+
+.flip-clock-label {
+    display: none;
+}
+
+.flip-clock-wrapper ul {
+    height: 70px;
+    width: 46px;
+}
+
+.flip-clock-divider {
+    height: 85px;
+}

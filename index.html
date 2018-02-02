@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title></title>
+
+        <!-- fonts -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Poppins:400,700|Raleway:400,700" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+        <!--styles-->
+
+        <link rel="stylesheet" href="css/flipclock.css">
+        <link rel="stylesheet" href="css/styles.css">
+        <link rel="stylesheet" href="css/media.css">
+    </head>
+
+    <body>
+        <div class="wrap">
+            <header class="header">
+                <div class="container">
+                    <a href="#" class="logo">
+                        <img src="img/logo.png" alt="" class="img-logo">
+                    </a>
+                </div>
+            </header>
+
+            <section class="banner">
+                <div class="container">
+                    <div class="text-wrap">
+                        <h1 class="banner-title">Cryptobank for <span class="text-warm">Crypto</span>people</h1>
+
+                        <p class="banner-sub-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad
+                            consequatur cupiditate dolorum ea est eveniet impedit in itaque mollitia, nesciunt possimus
+                            quaerat quo, quos, sed sit velit voluptates! Amet, ullam!</p>
+
+                        <div class="btns-wrap">
+                            <a href="#" class="btn btn-primary">Whitepaper</a>
+                            <a href="#" class="btn btn-primary-outline">Watch a video</a>
+                        </div>
+                        <div class="countdown"></div>
+                    </div>
+
+                    <div class="form-wrap">
+                        <form action="/" method="post">
+                            <header class="form-header">
+                                <h3 class="form-title">Fill in the form below <br> to get in touch with us!</h3>
+                            </header>
+
+                            <ul class="form-list">
+                                <li class="form-list-item">
+                                    <input type="text" class="form-control" placeholder="Name*">
+                                </li>
+                                <li class="form-list-item">
+                                    <input type="text" class="form-control" placeholder="Email*">
+                                </li>
+                                <li class="form-list-item">
+                                    <input type="text" class="form-control" placeholder="Tel*">
+                                </li>
+                                <li class="form-list-item text-center">
+                                    <input type="submit" class="btn btn-warm" value="Submit">
+                                </li>
+                            </ul>
+                        </form>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+
+        <!--Scripts-->
+        <script src="js/jquery-1.11.3.min.js"></script>
+        <script src="js/flipclock.min.js"></script>
+
+        <script type="text/javascript">
+            var clock = $('.countdown').FlipClock(3600 * 24 * 3, {
+                clockFace: 'DailyCounter',
+                countdown: true
+            });
+        </script>
+        <script src="js/main.js"></script>
+    </body>
+</html>
